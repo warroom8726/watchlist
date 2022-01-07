@@ -2,9 +2,11 @@ from flask import Flask
 from flask import url_for, request
 from flask.templating import render_template
 from werkzeug.utils import escape, redirect
+
 app = Flask(__name__)
 
-name_value = 'wenjie chen'
+
+name_value = 'chenwj'
 movies_value = [
     {'title':'my first movie', 'year': '2011'},
     {'title':'my second movie', 'year': '2012'},
@@ -50,3 +52,15 @@ def hello_test2():
 @app.route("/movie")
 def movie():
     return render_template('index.html', name=name_value, movies=movies_value)
+
+@app.route("/movie2")
+def movie2():
+    return render_template('index2.html', name=name_value, movies=movies_value, nameext='images/bar1.png')
+
+@app.route("/gif2")
+def hello_gif2():
+    return '<h2>nihao set!</h2> '
+
+@app.route('/ico')
+def func_ico():
+    return render_template('ico.html', name='testname')

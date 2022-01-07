@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{{ name }}</title>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='set.ico') }}">
+    <h2>
+        <h1>{{ name }}'s bar</h1>
+        <img alt="Avatar" src="{{ url_for('static', filename='images/bar1.png') }}">
+    </h2>
+    <img alt="walking totoro" src="{{ url_for('static', filename='images/totoro.gif')}}">
+    <footer>
+        <small>&copy; 2022 <a href="http://helloflask.com/tutorial">HelloFlask</a></small>
+    </footer>
+</body>
+</html>
