@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>-- {{ name }} --</title>
+    <link rel="icon" href="{{ url_for('static', filename='set.ico')}}">
+    <img src="{{ url_for('static', filename='set.ico') }}">
+</head>
+<body>
+    <h2>{{ name }}'s do something</h2>
+	<h1>图片上传</h1>
+    <form method=post enctype=multipart/form-data>
+         <input type=file name=file>
+         <input type=submit value=上传>
+    </form>
+    <footer>
+        <small>&copy; 2022 <a href="https://www.baidu.com"> Baidu </a></small>
+    </footer>
+</body>
+</html>
